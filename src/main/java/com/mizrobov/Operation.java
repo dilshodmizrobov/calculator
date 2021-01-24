@@ -69,7 +69,7 @@ public final class Operation {
     }
 
     public static String arabicToRoman(int number) {
-        if ((number <= 0) || (number >= 100)) {
+        if ((number <= 0) || (number > 100)) {
             throw new IllegalArgumentException(number + " не в диапозоне (0,100]");
         }
 

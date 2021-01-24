@@ -8,7 +8,7 @@ public class Start {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Вводите выражение!!!");
+        System.out.println("Вводите выражение");
         while (true){
 
             String exp = scanner.nextLine();
@@ -30,7 +30,17 @@ public class Start {
                     int opr2 = Operation.romanToArabic(secondOper);
                     if (Operation.isRange(opr1,opr2)){
                         int result = Operation.action(opr1, opr2, operator);
-                        System.out.println(Operation.arabicToRoman(result));
+                        try {
+                            System.out.println(Operation.arabicToRoman(result));
+                        }catch (IllegalArgumentException e){
+                            System.out.println(e.getMessage());
+                            System.out.println("Завершить y/n");
+                            if (scanner.nextLine().equals("y")){
+                                break;
+                            } else {
+                                continue;
+                            }
+                        }
                     } else{
                         System.out.println("Ввод не в диапозоне (0;10]");
                         System.out.println("Завершить y/n");

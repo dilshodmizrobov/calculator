@@ -34,7 +34,7 @@ public final class Operation {
     }
 
     private static int sub(int a, int b) {
-        return b - a;
+        return a - b;
     }
 
     private static int multiply(int a, int b) {
@@ -42,7 +42,7 @@ public final class Operation {
     }
 
     private static int divide(int a, int b) {
-        return b / a;
+        return a / b;
     }
 
     public static boolean isValidExpression(String input){
@@ -73,7 +73,7 @@ public final class Operation {
 
     public static String arabicToRoman(int number) {
         if ((number <= 0) || (number >= 100)) {
-            throw new IllegalArgumentException(number + " is not in range (0,100]");
+            throw new IllegalArgumentException(number + " не в диапозоне (0,100]");
         }
 
         List<RomanNumeral> romanNumerals = RomanNumeral.getReverseSortedValues();
@@ -113,7 +113,7 @@ public final class Operation {
         }
 
         if (romanNumeral.length() > 0) {
-            throw new IllegalArgumentException(input + " cannot be converted to a Roman Numeral");
+            throw new IllegalArgumentException(input + " невозможна пребразовать в римкской");
         }
 
         return result;

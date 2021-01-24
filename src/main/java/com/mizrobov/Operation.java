@@ -58,10 +58,7 @@ public final class Operation {
     }
 
     public static boolean isRoman(String symbol){
-        List<String> romanSympols=Arrays.stream(RomanNumeral.values())
-                                        .map(romanNumeral -> romanNumeral.name())
-                                        .collect(Collectors.toList());
-        return romanSympols.contains(symbol);
+        return Pattern.matches("^[IVX]{1,3}$",symbol);
     }
 
     public static boolean isRange(int opr1, int opr2) {

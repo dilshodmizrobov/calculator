@@ -25,6 +25,7 @@ public class Start {
                 String firstOper = operands[0];
                 String secondOper = operands[1];
                 String operator = operands[2];
+                System.out.println(firstOper + " " + secondOper + " " + operator);
                 if (Operation.isRoman(firstOper) && Operation.isRoman(secondOper)) {
                     int opr1 = Operation.romanToArabic(firstOper);
                     int opr2 = Operation.romanToArabic(secondOper);

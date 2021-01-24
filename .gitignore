@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+.idea
+calculator.iml
+target
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
